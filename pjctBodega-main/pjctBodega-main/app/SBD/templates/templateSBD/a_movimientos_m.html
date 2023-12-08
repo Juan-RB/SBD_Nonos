@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="e">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/sbd.css' %}" type="text/css">
+    <title>Portal movimientos historicos muestras - SBD NONOS</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <div class="container">
+        <div class="row">
+            <nav class="navbar custom-navbar fixed-top">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                  
+                    <a class="letra_menu_gestiones_titulo"> Busqueda de muestras - SBD nonos alpha version</a>
+                    <a class="letra_menu_gestiones" href="{% url 'administrador_bodega' %}"> Volver al menu modulo</a>
+
+                </div>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Tus datos</h5><br>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Nombre: {{ trabajador.nomTra }}</a>
+                                <a class="nav-link" href="#">Funcion: {{ actividad }}</a>
+                                <a class="nav-link" href="#">codigo trabajador: {{trabajador.codTra}}</a>
+                                <a class="nav-link" href="#">Codigo de administrador: {{ funcion.codAdmin }}</a>
+                                <a class="nav-link" href="#">Nombre de bodega: {{ bodega.nomBod }} </a>
+                                <a class="nav-link" href="#">Ubicacion de trabajo: {{ bodega.dirBod }}</a>
+                            </li><br><br>
+                        
+                            <a href="{% url 'cerrar_sesion' %}" class="btn btn-danger">Cerrar Sesión</a>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <h2> Datos de la bodega </h2>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class="datos_mensaje_prueba2">
+                    <p class="" href="#">Codigo de tu bodega: {{ bodega.codBod }}</p>
+                    <p class="" href="#">Nombre de bodega: {{ bodega.nomBod }}</p>
+                    <p class="" href="#">Direccion de la bodega: {{ bodega.dirBod }}</p>
+                    <p class="" href="#">Cantidad de pasillos: {{ bodega.cantPas }}</p>
+                    <p class="" href="#">Comuna de la bodega: {{ bodega.codCom }}</p>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div><br><br>
+
+
+        
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+               <h2> Criterios de busqueda</h2>
+            </div>
+            <div class="col-2"></div>
+        </div><br><br>
+
+
+   
+
+        <div class="form-container">
+            <div class="left-forms">
+
+                
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="form-group">
+
+                        {{ form.codUbi.label_tag }}
+                        {{ form.codUbi }}
+
+                        <button type="submit" class="boton-buscar" name="ubicacion_m"> Buscar</button>
+                    </div>
+                </form>
+
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="form-group">
+
+                        {{ form.codMovM.label_tag }}
+                        {{ form.codMovM }}
+
+                        <button type="submit" class="boton-buscar" name="tipo_mov"> Buscar</button>
+                    </div>
+                </form>
+
+                
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="form-group">
+
+                        {{ form.codBode.label_tag }}
+                        {{ form.codBode }}
+
+                        <button type="submit" class="boton-buscar" name="bodeguero"> Buscar</button>
+                    </div>
+                </form>
+            </div>
+
+
+
+
+            <div class="right-forms">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.mes.label_tag }}
+                        {{ form.mes }}
+                        <button type="submit" class="boton-buscar" name="fecha"> Buscar</button>
+                    </div>
+                </form>
+
+
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.years.label_tag }}
+                        {{ form.years }}
+                        <button type="submit" class="boton-buscar" name="year"> Buscar</button>
+                    </div>
+                </form>
+
+
+
+
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.fechaIngM.label_tag }}
+                        {{ form.fechaIngM }}
+                        <button type="submit" class="boton-buscar" name="fecha_c"> Buscar</button>
+                    </div>
+                </form>
+
+        
+            </div>
+
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10" id="gestion_ubicaciones">
+
+                <div class="alert alert-dark display-1">Registro de Movimientos de Muestras </div>
+
+
+                {% csrf_token %}
+                <input type="hidden" name="codBod" value="{{ bodega.codBod }}">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>C. Registro</th>
+                            <th>C. Ubicacion</th>
+                            <th>C. Muestra</th>
+                            <th>Movimiento</th>
+                            <th>Cantidad</th>
+                            <th>Bodeguero</th>
+                            <th>Fecha </th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        {% for registro in registros %}
+                        <tr>
+                            <td>{{ registro.codRegM }}</td>
+                            <td>{{ registro.codUbi }}</td>
+                            <td>{{ registro.codTela }}</td>
+                            <td>{{ registro.codMovM }}</td>
+                            <td>{{ registro.cantidad }}</td>
+                            <td>{{ registro.codBode }}</td>
+                            <td>{{ registro.fechaIngM }}</td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+
+                
+                {% if not registros %}
+                <div class="alert alert-dark">No hay registros </div>
+                {% endif %}
+
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+

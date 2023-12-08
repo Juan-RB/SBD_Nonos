@@ -1,0 +1,118 @@
+2023-10-20 00:58:15,363 [INFO] Watching for file changes with StatReloader
+2023-10-20 00:59:52,743 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 00:59:53,299 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:00:45,443 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:00:46,008 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:03:31,311 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:03:31,897 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:03:37,430 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:03:37,974 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:03:40,365 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:03:40,887 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:03:49,650 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:03:50,167 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:03:51,567 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:03:52,093 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:03:53,509 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:03:54,067 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:04:27,698 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:04:28,201 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:04:29,650 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:04:30,224 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:04:33,872 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:04:34,433 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:07:46,429 [ERROR] Internal Server Error: /inicio/
+Traceback (most recent call last):
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py", line 12, in inicio
+    return render(request, 'templateSBD/index.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login_view' not found. 'login_view' is not a valid view function or pattern name.
+2023-10-20 01:08:57,485 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBD\urls.py changed, reloading.
+2023-10-20 01:08:58,074 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:09:03,588 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBD\urls.py changed, reloading.
+2023-10-20 01:09:04,144 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:09:06,826 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBD\urls.py changed, reloading.
+2023-10-20 01:09:07,374 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:09:19,298 [INFO] Usuario autenticado con éxito.
+2023-10-20 01:09:19,298 [INFO] Usuario autenticado con éxito.
+2023-10-20 01:09:20,781 [WARNING] Credenciales inválidas.
+2023-10-20 01:09:20,822 [ERROR] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py", line 46, in login_view
+    return render(request, 'templateSBD/login.html',{'error_message': 'Credenciales inválidas'})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\skavi\AppData\Roaming\Python\Python311\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: templateSBD/login.html
+2023-10-20 01:13:47,891 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBD\urls.py changed, reloading.
+2023-10-20 01:13:48,463 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:14:47,488 [WARNING] Not Found: /login/
+2023-10-20 01:16:34,897 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:16:35,459 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:16:39,116 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:16:39,762 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:16:44,494 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:16:45,042 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:17:10,427 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:17:15,545 [WARNING] Not Found: /
+2023-10-20 01:18:31,558 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:18:32,123 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:19:12,696 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:19:13,282 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:19:20,842 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:19:21,391 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:19:31,647 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:19:42,232 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBDcrud\views.py changed, reloading.
+2023-10-20 01:19:42,772 [INFO] Watching for file changes with StatReloader
+2023-10-20 01:19:46,693 [WARNING] Not Found: /
+2023-10-20 01:21:32,760 [INFO] C:\Users\skavi\Documents\programas vs\4to semestre\taller de aplicaciones\pjctBodega\app\SBD\SBD\settings.py changed, reloading.

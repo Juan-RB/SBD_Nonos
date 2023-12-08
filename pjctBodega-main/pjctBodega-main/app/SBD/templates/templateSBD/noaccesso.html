@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/sbd.css' %}" type="text/css">
+    <title>Acceso no autorizado</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10 barra_inicio">
+                <nav class="navbar navbar-expand-lg custom-navbar">
+                    <div class="container-fluid ">
+                        <a class="navbar-brand" href="#">
+                            <img src="{% static 'img/captura.PNG' %}" class="d-inline-block align-text-top">
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item inicio">
+                                    <a class="nav-link disabled" href="#">Contacto</a>
+                                </li>
+                            </ul>
+                            <span class="navbar-text">
+                                SBDnonos version beta
+                            </span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" >
+
+                <h1 class="noacceso">No tienes los permisos para acceder a esta pagina.<br>
+                    si necesitas estos privilegios consulta a tu administrador
+                </h1>
+
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+
+
+
+                <a href="{% url 'inicio' %}" class="btn btn-danger botonacceso">Cerrar Sesión</a>
+
+
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
